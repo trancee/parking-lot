@@ -1,0 +1,7 @@
+**/.vscode/
+**/.pytest_cache/
+
+**/htmlcov/
+
+**/.coverage
+**/*.pyc
