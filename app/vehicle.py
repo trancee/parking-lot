@@ -5,6 +5,8 @@ class Vehicle:
 
     def __eq__(self, other):
         return (
+            other and
+
             self.__registration_number == other.__registration_number and
             self.__colour == other.__colour
         )
