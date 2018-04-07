@@ -33,7 +33,7 @@ class ParkingLot:
             slot = next(i for i, slot in enumerate(self.__slots) if slot is None)
 
         except StopIteration:
-            print ('Parking lot is full')
+            print ('Sorry, parking lot is full')
             return False
 
         self.__slots[slot] = __vehicle
@@ -65,8 +65,10 @@ def create_parking_lot(num_slots):
 
     if isinstance(num_slots, int):
         if parking_lot:
-            parking_lot = ParkingLot(num_slots)
-            return True
+            return False
+
+        parking_lot = ParkingLot(num_slots)
+        return True
 
     return False
 
