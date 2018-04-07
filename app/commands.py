@@ -53,7 +53,7 @@ class Commands:
 
     def registration_numbers_for_cars_with_colour(self, colour):
         if self.parking_lot:
-            registration_numbers = [vehicle.registration_number for vehicle in self.parking_lot.slots if vehicle and vehicle.colour == colour]
+            registration_numbers = [str(vehicle.registration_number) for vehicle in self.parking_lot.slots if vehicle and vehicle.colour == colour]
 
             if registration_numbers:
                 print (', '.join(registration_numbers))
