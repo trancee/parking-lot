@@ -9,7 +9,7 @@ def main():
     while(True):
         try:
             command = input("> ")
-            print (command)
+            #print (command)
 
         except (EOFError, KeyboardInterrupt):
             break
@@ -21,11 +21,14 @@ def main():
         method = args.pop(0)
 
         if not hasattr(commands, method):
-            print ("*** Method not found")
+            print ('*** Command not found')
 
         if method in dir(commands):
             kwargs = {}
             result = getattr(commands, method)(*args, **kwargs)
+
+            if result is False:
+                print ('*** Command failed')
 
 
 if __name__ == '__main__':

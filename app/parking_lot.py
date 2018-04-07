@@ -31,12 +31,11 @@ class ParkingLot:
             # Adjust the index
             slot = i + 1
 
+            self.__slots[i] = __vehicle
+            print ('Allocated slot number: %d' % (slot))
+
         except StopIteration:
             print ('Sorry, parking lot is full')
-            return False
-
-        self.__slots[i] = __vehicle
-        print ('Allocated slot number: %d' % (slot))
 
         return True
 

@@ -57,10 +57,11 @@ class Commands:
 
             if registration_numbers:
                 print (', '.join(registration_numbers))
-                return True
 
             else:
                 print ('Not found')
+
+            return True
 
         return False
 
@@ -71,10 +72,11 @@ class Commands:
 
             if slots:
                 print (', '.join(slots))
-                return True
 
             else:
                 print ('Not found')
+
+            return True
 
         return False
 
@@ -86,11 +88,11 @@ class Commands:
                 # Adjust the index
                 slot = i + 1
 
+                print (slot)
+
             except StopIteration:
                 print ('Not found')
-                return False
 
-            print (slot)
             return True
 
         return False
