@@ -12,6 +12,7 @@ class Vehicle:
     @property
     def registration_number(self):
         return self.__registration_number
+
     @property
     def colour(self):
         return self.__colour
